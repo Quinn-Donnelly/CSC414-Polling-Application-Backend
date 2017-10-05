@@ -50,5 +50,9 @@
   "questions": {
     "dataSource": "db",
     "public": true
+  },
+  "answer": {
+    "dataSource": "db",
+    "public": true
   }
 }
