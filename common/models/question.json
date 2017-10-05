@@ -1,5 +1,5 @@
 {
-  "name": "questions",
+  "name": "question",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
@@ -25,7 +25,13 @@
     }
   },
   "validations": [],
-  "relations": {},
+  "relations": {
+    "classroom": {
+      "type": "belongsTo",
+      "model": "classroom",
+      "foreignKey": "classroomId"
+    }
+  },
   "acls": [],
   "methods": {}
 }

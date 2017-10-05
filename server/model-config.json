@@ -47,7 +47,7 @@
     "dataSource": "db",
     "public": true
   },
-  "questions": {
+  "question": {
     "dataSource": "db",
     "public": true
   },

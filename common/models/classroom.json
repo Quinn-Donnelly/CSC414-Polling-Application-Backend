@@ -22,7 +22,18 @@
     }
   },
   "validations": [],
-  "relations": {},
+  "relations": {
+    "questions": {
+      "type": "hasMany",
+      "model": "question",
+      "foreignKey": ""
+    },
+    "students": {
+      "type": "hasMany",
+      "model": "student",
+      "foreignKey": ""
+    }
+  },
   "acls": [],
   "methods": {}
 }
