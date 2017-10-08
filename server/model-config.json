@@ -39,19 +39,15 @@
     "dataSource": "db",
     "public": true
   },
-  "teacher": {
-    "dataSource": "db",
-    "public": true
-  },
-  "student": {
-    "dataSource": "db",
-    "public": true
-  },
   "question": {
     "dataSource": "db",
     "public": true
   },
   "answer": {
+    "dataSource": "db",
+    "public": true
+  },
+  "client": {
     "dataSource": "db",
     "public": true
   }

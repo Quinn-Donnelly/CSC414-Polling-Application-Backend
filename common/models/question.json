@@ -30,6 +30,11 @@
       "type": "belongsTo",
       "model": "classroom",
       "foreignKey": "classroomId"
+    },
+    "answers": {
+      "type": "hasMany",
+      "model": "answer",
+      "foreignKey": ""
     }
   },
   "acls": [],

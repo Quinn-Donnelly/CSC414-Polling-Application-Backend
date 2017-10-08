@@ -1,5 +1,5 @@
 {
-  "name": "student",
+  "name": "client",
   "base": "User",
   "idInjection": true,
   "options": {

@@ -12,7 +12,18 @@
     }
   },
   "validations": [],
-  "relations": {},
+  "relations": {
+    "question": {
+      "type": "belongsTo",
+      "model": "question",
+      "foreignKey": ""
+    },
+    "student": {
+      "type": "belongsTo",
+      "model": "client",
+      "foreignKey": ""
+    }
+  },
   "acls": [],
   "methods": {}
 }

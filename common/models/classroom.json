@@ -28,9 +28,14 @@
       "model": "question",
       "foreignKey": ""
     },
+    "teacher": {
+      "type": "belongsTo",
+      "model": "client",
+      "foreignKey": ""
+    },
     "students": {
       "type": "hasMany",
-      "model": "student",
+      "model": "client",
       "foreignKey": ""
     }
   },
