@@ -5,9 +5,21 @@
   "options": {
     "validateUpsert": true
   },
-  "properties": {},
+  "properties": {
+    "username": {
+      "type": "string",
+      "required": true
+    }
+  },
   "validations": [],
   "relations": {},
-  "acls": [],
+  "acls": [
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "DENY"
+    }
+  ],
   "methods": {}
 }
