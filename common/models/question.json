@@ -35,6 +35,11 @@
       "type": "hasMany",
       "model": "answer",
       "foreignKey": ""
+    },
+    "teacher": {
+      "type": "belongsTo",
+      "model": "client",
+      "foreignKey": ""
     }
   },
   "acls": [
@@ -43,6 +48,19 @@
       "principalType": "ROLE",
       "principalId": "$everyone",
       "permission": "DENY"
+    },
+    {
+      "accessType": "WRITE",
+      "principalType": "ROLE",
+      "principalId": "$owner",
+      "permission": "ALLOW"
+    },
+    {
+      "accessType": "EXECUTE",
+      "principalType": "ROLE",
+      "principalId": "$authenticated",
+      "permission": "ALLOW",
+      "property": "create"
     }
   ],
   "methods": {}

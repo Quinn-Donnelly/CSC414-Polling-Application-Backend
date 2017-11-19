@@ -2,8 +2,22 @@
 
 var loopback = require('loopback');
 var boot = require('loopback-boot');
+var cookieParser = require('cookie-parser');
 
 var app = module.exports = loopback();
+
+app.use(cookieParser());
+// Look for accessToken in the route and in cookie
+app.use(loopback.token({
+  model: app.model.accessToken,
+}));
+
+app.get('*', (req, res, next) => {
+  if (!req.accessToken) {
+    req.accessToken = req.cookies;
+  }
+  next();
+});
 
 app.start = function() {
   // start the web server
