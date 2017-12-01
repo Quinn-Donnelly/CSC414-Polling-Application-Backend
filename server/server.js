@@ -3,10 +3,13 @@
 var loopback = require('loopback');
 var boot = require('loopback-boot');
 var cookieParser = require('cookie-parser');
+var bodyParser = require('body-parser');
+var shortid = require('shortid');
 
 var app = module.exports = loopback();
 
 app.use(cookieParser());
+app.use(bodyParser.json());
 // Look for accessToken in the route and in cookie
 app.use(loopback.token({
   model: app.model.accessToken,
@@ -16,6 +19,12 @@ app.get('*', (req, res, next) => {
   if (!req.accessToken) {
     req.accessToken = req.cookies;
   }
+  next();
+});
+
+app.post('/api/classrooms', (req, res, next) => {
+  req.body['shortid'] = shortid.generate();
+  console.log(req.body);
   next();
 });
 
