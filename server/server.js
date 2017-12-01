@@ -24,7 +24,6 @@ app.get('*', (req, res, next) => {
 
 app.post('/api/classrooms', (req, res, next) => {
   req.body['shortid'] = shortid.generate();
-  console.log(req.body);
   next();
 });
 
